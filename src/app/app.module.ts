@@ -1,14 +1,18 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { AppRouterModule } from './app-router.module';
 
 import { AppComponent } from './app.component';
 
-//primeng
-import { ButtonModule } from 'primeng/button';
-import { RippleModule } from 'primeng/ripple';
+import { SharedModule } from './shared/shared.module';
+
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, ButtonModule, RippleModule],
+  imports: [
+    BrowserModule, 
+    SharedModule, 
+    AppRouterModule
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
