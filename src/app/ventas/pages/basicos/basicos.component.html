@@ -1,1 +1,49 @@
-<p>basicos works!</p>
+<div class="text-layout">
+  <h1>Pipes Básicos</h1>
+  <p>Pipes incluídos en Angular - Usualmente en el Common Module</p>
+</div>
+<div class="grid">
+  <div class="col-4">
+    <p-card header="UpperCase" [subheader]="nombreLower">
+      {{nombreLower | uppercase}}
+    </p-card>
+  </div>
+  <div class="col-4">
+    <p-card header="LowerCase" [subheader]="nombreUpper">
+      {{nombreUpper | lowercase}}
+    </p-card>
+  </div>
+  <div class="col-4">
+    <p-card header="TitleCase" [subheader]="nombreCompleto">
+      {{nombreCompleto | titlecase}}
+    </p-card>
+  </div>
+</div>
+<div class="text-layout">
+  <h1>Date | Fecha | Pipe</h1>
+  <p>Pipes para mostrar la fechas.</p>
+</div>
+<div class="grid">
+  <div class="col-6">
+    <p-card>
+      <ul>
+        <li>fecha</li>
+        <li>fecha | date</li>
+        <li>fecha | date:"short"</li>
+        <li>fecha | date:"long"</li>
+        <li>fecha | date:"dd-MM-yyyy - GGG" - customDate</li>
+      </ul>
+    </p-card>
+  </div>
+  <div class="col-6">
+    <p-card>
+      <ul>
+        <li>fecha : {{fecha}}</li>
+        <li>fecha : {{fecha | date}}</li>
+        <li>fecha : {{fecha | date:"short"}}</li>
+        <li>fecha : {{fecha | date:"long"}}</li>
+        <li>fecha : {{fecha | date:"dd-MM-yyyy - GGG"}}</li>
+      </ul>
+    </p-card>
+  </div>
+</div>
