@@ -1,5 +1,6 @@
 import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRouterModule } from './app-router.module';
 
 import { AppComponent } from './app.component';
@@ -9,12 +10,20 @@ import { VentasModule } from './ventas/ventas.module';
 
 //Cambiar el local de la app
 import localEs from '@angular/common/locales/es-PE';
+import localFr from '@angular/common/locales/fr';
 import { registerLocaleData } from '@angular/common';
 registerLocaleData(localEs);
+registerLocaleData(localFr);
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, SharedModule, AppRouterModule, VentasModule],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule, 
+    SharedModule, 
+    AppRouterModule, 
+    VentasModule,
+  ],
   providers: [
     {
       provide: LOCALE_ID,

@@ -3,17 +3,17 @@
   <p>Pipes incluídos en Angular - Usualmente en el Common Module</p>
 </div>
 <div class="grid">
-  <div class="col-4">
+  <div class="md:col-4 col-12">
     <p-card header="UpperCase" [subheader]="nombreLower">
       {{nombreLower | uppercase}}
     </p-card>
   </div>
-  <div class="col-4">
+  <div class="md:col-4 col-12">
     <p-card header="LowerCase" [subheader]="nombreUpper">
       {{nombreUpper | lowercase}}
     </p-card>
   </div>
-  <div class="col-4">
+  <div class="md:col-4 col-12">
     <p-card header="TitleCase" [subheader]="nombreCompleto">
       {{nombreCompleto | titlecase}}
     </p-card>
@@ -24,7 +24,7 @@
   <p>Pipes para mostrar la fechas.</p>
 </div>
 <div class="grid">
-  <div class="col-6">
+  <div class="md:col-6 col-12">
     <p-card>
       <ul>
         <li>fecha</li>
@@ -33,9 +33,16 @@
         <li>fecha | date:"long"</li>
         <li>fecha | date:"dd-MM-yyyy - GGG" - customDate</li>
       </ul>
+      <hr>
+      <ul>
+        <li>fecha : fecha | date:"long":'GMT-6'</li>
+        <li>fecha : fecha | date:"long":'GMT-4'</li>
+        <li>fecha : fecha | date:"long":'':'en'</li>
+        <li>fecha : fecha | date:"long":'':'fr'</li>
+      </ul>
     </p-card>
   </div>
-  <div class="col-6">
+  <div class="md:col-6 col-12">
     <p-card>
       <ul>
         <li>fecha : {{fecha}}</li>
@@ -43,6 +50,13 @@
         <li>fecha : {{fecha | date:"short"}}</li>
         <li>fecha : {{fecha | date:"long"}}</li>
         <li>fecha : {{fecha | date:"dd-MM-yyyy - GGG"}}</li>
+      </ul>
+      <hr>
+      <ul>
+        <li>fecha : {{fecha | date:"long":'GMT-6'}}</li>
+        <li>fecha : {{fecha | date:"long":'GMT-4'}}</li>
+        <li>fecha : {{fecha | date:"long":'':'en'}}</li>
+        <li>fecha : {{fecha | date:"long":'':'fr'}}</li>
       </ul>
     </p-card>
   </div>
