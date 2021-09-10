@@ -37,4 +37,27 @@ export class NoComunesComponent {
   borrarCliente = () => {
     this.clientes.pop();
   };
+
+  // KeyValue Pipe
+  persona = {
+    nombre: 'Jhosep',
+    edad: 35,
+    direccion: 'Ottawa, Canadá',
+  };
+
+  // JsonPipe
+  heroes = [
+    {
+      nombre: 'Superman',
+      vuela: true,
+    },
+    {
+      nombre: 'Robin',
+      vuela: false,
+    },
+    {
+      nombre: 'Aquaman',
+      vuela: false,
+    },
+  ];
 }
